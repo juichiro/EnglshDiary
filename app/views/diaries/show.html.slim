@@ -1,2 +1,10 @@
-h1 Diaries#show
-p Find me in app/views/diaries/show.html.slim
+h1 #{@diary.day}の日記
+
+h4 タイトル: #{@diary.title}
+
+h4 本文
+p =@diary.description
+
+=link_to '日記一覧へ', diaries_path,class: 'btn btn-primary'
+
+
