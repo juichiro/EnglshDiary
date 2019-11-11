@@ -1,31 +1,31 @@
 class DiariesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @diaries = Diary.all
+    @diaries = current_user.diaries.all
   end 
   def show
-    @diary = Diary.find(params[:id])
+    @diary = current_user.diaries.find(params[:id])
   end
 
   def new
-    @diary = Diary.new
+    @diary = current_user.diaries.new
   end
 
   def edit
-    @diary = Diary.find(params[:id])
+    @diary = current_user.diaries.find(params[:id])
   end
   def create
-    diary = Diary.new(diary_params)
+    diary = current_user.diaries.new(diary_params)
     diary.save
     redirect_to diaries_url
   end 
   def update
-    @diary = Diary.find(params[:id])
+    @diary = current_user.diaries.find(params[:id])
     @diary.update(diary_params)
     redirect_to @diary
   end 
   def destroy
-    @diary = Diary.find(params[:id])
+    @diary = current_user.diaries.find(params[:id])
     @diary.destroy
     redirect_to diaries_url
   end 
