@@ -8,5 +8,25 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+   nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand[href="#"]
+      | English Diary
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替"]
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.active
+          a.nav-link[href="#"]
+            | ホーム 
+            span.sr-only
+              | (現位置)
+        li.nav-item =link_to '日記一覧',diaries_path, class:'nav-link'
+        li.nav-item
+          a.nav-link[href="#"]
+            | リンク2
+        li.nav-item
+          a.nav-link.disabled[href="#"]
+            |  tabindex="-1" aria-disabled="true"無効
+
    .container
     = yield

@@ -5,6 +5,9 @@ h4 タイトル: #{@diary.title}
 h4 本文
 p =@diary.description
 
+=link_to '編集',edit_diary_path,class:'btn btn-primary mr-3'
+=link_to '削除', diary_path,class:'btn btn-danger mr-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
 =link_to '日記一覧へ', diaries_path,class: 'btn btn-primary'
+
 
 
