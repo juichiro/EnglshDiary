@@ -29,6 +29,12 @@ class DiariesController < ApplicationController
     @diary.destroy
     redirect_to diaries_url
   end 
+  def translate_new
+  end
+  def show_translated_text
+     client = Aws::Translate::Client.new(region: 'us-west-2')
+     @result = client.translate_text(text: params[:text], source_language_code:'ja',target_language_code: 'en')
+  end
 
 private
  def diary_params
