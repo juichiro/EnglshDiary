@@ -1,0 +1,8 @@
+
+= form_with model: diary, url: translation_path do |f|
+  .form-group
+    = f.label :text, 'テキスト'
+    = f.text_area :text,class:'form-control'
+  = f.submit '翻訳', class:'btn btn-primary'
+  
+p.result 翻訳結果

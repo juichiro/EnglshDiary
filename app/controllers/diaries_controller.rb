@@ -33,7 +33,7 @@ class DiariesController < ApplicationController
   end
   def show_translated_text
      client = Aws::Translate::Client.new(region: 'ap-northeast-1')
-     @result = client.translate_text(text: params[:text], source_language_code:'ja',target_language_code: 'en')
+     @result = client.translate_text(text: params[:diary][:text], source_language_code:'ja',target_language_code: 'en')
   end
 
 private

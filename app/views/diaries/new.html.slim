@@ -1,5 +1,7 @@
 h1 日記の作成
 
+= render partial: 'translate_new', locals:{ diary: @diary }
+
 = form_with model: @diary, local: true do |f|
   .form-group
     = f.label :day, '日時'
