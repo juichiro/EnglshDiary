@@ -1,6 +1,6 @@
 h1 日記の作成
 
-= form_with(model: @diary, locale: true) do |f|
+= form_with model: @diary, local: true do |f|
   .form-group
     = f.label :day, '日時'
     = f.date_select :day
