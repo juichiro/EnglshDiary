@@ -18,34 +18,32 @@ RSpec.describe Diary, type: :model do
   end 
   
   it "dayカラムがnillなら無効" do 
-   diary = @user.diaries.new(day: nil)
-   diary.valid?
-   expect(diary.errors[:day]).to include("can't be blank")
+    diary = @user.diaries.new(day: nil)
+    diary.valid?
+    expect(diary.errors[:day]).to include("can't be blank")
   end 
   
   it "titleカラムがnillなら無効" do 
-   diary = @user.diaries.new(title: nil)
-   diary.valid?
-   expect(diary.errors[:title]).to include("can't be blank")
+    diary = @user.diaries.new(title: nil)
+    diary.valid?
+    expect(diary.errors[:title]).to include("can't be blank")
   end
   
   it "descriptionカラムがnillなら無効" do 
-   diary = @user.diaries.new(description: nil)
-   diary.valid?
-   expect(diary.errors[:description]).to include("can't be blank")
+    diary = @user.diaries.new(description: nil)
+    diary.valid?
+    expect(diary.errors[:description]).to include("can't be blank")
   end
   
   it "titleカラムに30文字以上入力されると無効(31文字)" do 
-      diary = @user.diaries.new(title: "1234567890123456789012345678901")
-      diary.valid?
-      expect(diary.errors[:title]).to include("is too long (maximum is 30 characters)")
+    diary = @user.diaries.new(title: "1234567890123456789012345678901")
+    diary.valid?
+    expect(diary.errors[:title]).to include("is too long (maximum is 30 characters)")
   end 
   it "titleカラム30文字ぴったりなら有効" do 
     diary = @user.diaries.new(title: "123456789012345678901234567890")
     diary.valid?
     expect(diary.errors[:title]).to be_empty
   end 
-      
-  
 end
 
