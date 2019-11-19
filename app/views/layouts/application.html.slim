@@ -21,8 +21,9 @@ html
             span.sr-only
               | (現位置)
         li.nav-item =link_to '日記一覧',diaries_path, class:'nav-link'
+        li.nav-item =link_to '日記新規作成', new_diary_path, class: 'nav-link'
         li.nav-item =link_to 'ログアウト',destroy_user_session_path, class:'nav-link', method: :delete
-        li.nav-item
+        /li.nav-item
           a.nav-link.disabled[href="#"]
             |  tabindex="-1" aria-disabled="true"無効
 
