@@ -1,14 +1,4 @@
 h1 #{@diary.day}の日記の編集
 
-= form_with(model: @diary, locale: true) do |f|
-  .form-group
-    = f.label :day, '日時'
-    = f.date_select :day
-  .form-group
-    = f.label :title, 'タイトル'
-    = f.text_field :title, class:'form-control'
-  .form-group
-    = f.label :description, '本文'
-    = f.text_area :description,class:'form-control', size:'20x20'
-  = f.submit '編集', class:'btn btn-primary'
-  
+= render partial: 'translate_new', locals:{ diary: @diary }
+= render partial: 'form', locals:{ diary: @diary }
