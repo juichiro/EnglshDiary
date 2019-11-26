@@ -1,5 +1,8 @@
 h1 日記の作成
-
+-if @diary.errors.present?
+  ul
+   - @diary.errors.full_messages.each do |message|
+     li =message
 = render partial: 'translate_new', locals:{ diary: @diary }
 
 = form_with model: @diary, local: true do |f|

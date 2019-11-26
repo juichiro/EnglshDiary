@@ -15,10 +15,13 @@ class DiariesController < ApplicationController
     @diary = current_user.diaries.find(params[:id])
   end
   def create
-    diary = current_user.diaries.new(diary_params)
-    diary.save
-    redirect_to diaries_url
-  end 
+    @diary = current_user.diaries.new(diary_params)
+    if @diary.save
+      redirect_to diaries_url
+    else
+      render :new
+    end
+  end
   def update
     @diary = current_user.diaries.find(params[:id])
     @diary.update(diary_params)
