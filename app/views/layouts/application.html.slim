@@ -30,4 +30,6 @@ html
    .container
     p.notice =notice
     p.alert  =alert
+    -if flash[:notice].present?
+     .alert.alert-info =flash[:notice]
     = yield
