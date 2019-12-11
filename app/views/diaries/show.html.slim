@@ -3,7 +3,10 @@ h2 #{@diary.day}の日記
 .card
  .card-title.mt-2.text-center
   h5 =@diary.title
- .card-body =@diary.description
+ .card-body 
+  -if @diary.image.attached?
+   =image_tag @diary.image, class:'img-fluid'
+  =@diary.description
 
 =link_to '編集',edit_diary_path,class:'btn btn-primary mr-3 mt-3'
 =link_to '削除', diary_path,class:'btn btn-danger mr-3 mt-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
