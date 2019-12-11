@@ -1,6 +1,15 @@
 @import "bootstrap";
 
+body{
+    background-color:rgba(255,255,245,1);
+}
 
 nav.navbar.navbar-expand-lg.navbar-light.bg-light.red{
     background-color: rgba(237,84,133,1) !important;
+}
+
+
+//bootstrapのbtnに独自の色のクラスを作る。綺麗な青
+.btn.btn-color{
+    background-color:rgba(255,182,185,1);
 }

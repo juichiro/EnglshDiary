@@ -8,9 +8,9 @@ h2 #{@diary.day}の日記
    =image_tag @diary.image, class:'img-fluid'
   =@diary.description
 
-=link_to '編集',edit_diary_path,class:'btn btn-primary mr-3 mt-3'
-=link_to '削除', diary_path,class:'btn btn-danger mr-3 mt-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
-=link_to '日記一覧へ', diaries_path,class: 'btn btn-primary mt-3'
+=link_to '編集',edit_diary_path,class:'btn btn-color mr-3 mt-3'
+=link_to '削除', diary_path,class:'btn btn-color mr-3 mt-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
+=link_to '日記一覧へ', diaries_path,class: 'btn btn-color mt-3'
 
 
 
