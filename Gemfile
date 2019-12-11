@@ -66,7 +66,7 @@ gem 'bootstrap'
 gem 'devise'
 gem 'aws-sdk', '~> 3'
 group :development, :test do 
-gem 'rspec-rails', '~> 3.6.0' 
+gem 'rspec-rails', '~> 3.7' 
 gem 'factory_bot_rails','~> 4.10.0'
 gem 'spring-commands-rspec'
 end 
