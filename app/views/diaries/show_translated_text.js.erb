@@ -1,5 +1,5 @@
 <!--翻訳結果をajaxで表示するためのコード-->
 <!-- document.querySelector('h5').style.display = 'none'; -->
-var translation_result = document.createElement('h5');
+var translation_result = document.createElement('p');
 translation_result.innerText = "<%= @result[:translated_text] %>";
 document.querySelector('.result').insertAdjacentElement('afterend',translation_result);
