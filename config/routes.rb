@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'word_books/index'
+  get 'word_books/new'
   devise_for :users
 resources :diaries
 root to: 'diaries#index' 
