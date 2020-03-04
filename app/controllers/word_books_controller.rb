@@ -2,6 +2,7 @@ class WordBooksController < ApplicationController
   before_action :authenticate_user!
   
   def index 
+    @word = current_user.word_books.new
     @words = current_user.word_books.all
   end
 

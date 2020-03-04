@@ -1,13 +1,10 @@
-h1 WordBooks#new
-p Find me in app/views/word_books/new.html.slim
 
-
--if @word.errors.present?
+-if word.errors.present?
   ul
-   - @word.errors.full_messages.each do |message|
+   - word.errors.full_messages.each do |message|
      li =message
      
-= form_with model: @word, local: true do |f|
+= form_with model: word do |f|
   .form-group
     = f.label :eword, '英'
     = f.text_field :eword, class:'form-control'
