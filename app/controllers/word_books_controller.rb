@@ -9,12 +9,13 @@ class WordBooksController < ApplicationController
     @word = current_user.word_books.new
   end
   def create
-    @word = current_user.word.new(word_params)
+    @word = current_user.word_books.new(word_params)
     @word.save
+    redirect_to word_books_index_url
   end
   
   private
   def word_params
-    params.require(:word).permit(:eword, :jword)
+    params.require(:word_book).permit(:eword, :jword)
   end
 end
