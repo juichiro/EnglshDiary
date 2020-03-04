@@ -22,6 +22,7 @@ html
               | (現位置)
         li.nav-item =link_to '日記一覧',diaries_path, class:'nav-link'
         li.nav-item =link_to '日記新規作成', new_diary_path, class: 'nav-link'
+        li.nav-item =link_to '単語帳', word_books_index_path, class: 'nav-link'
         li.nav-item =link_to 'ログアウト',destroy_user_session_path, class:'nav-link', method: :delete
         /li.nav-item
           a.nav-link.disabled[href="#"]
