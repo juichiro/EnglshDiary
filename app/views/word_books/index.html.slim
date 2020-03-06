@@ -12,4 +12,4 @@ table.table.table-hover
       td=word.eword
       td=word.jword
 
-= will_paginate @words
+= will_paginate(@words,class: "pagination justify-content-center",renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)
