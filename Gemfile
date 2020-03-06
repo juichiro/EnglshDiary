@@ -70,3 +70,9 @@ gem 'rspec-rails', '~> 3.7'
 gem 'factory_bot_rails','~> 4.10.0'
 gem 'spring-commands-rspec'
 end 
+
+gem 'kaminari', '~> 0.17.0'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'

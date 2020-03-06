@@ -3,7 +3,7 @@ class WordBooksController < ApplicationController
   
   def index 
     @word = current_user.word_books.new
-    @words = current_user.word_books.all
+    @words = current_user.word_books.paginate(page: params[:page], per_page: 20)
   end
 
   def new
@@ -19,4 +19,4 @@ class WordBooksController < ApplicationController
   def word_params
     params.require(:word_book).permit(:eword, :jword)
   end
-end
+end 
