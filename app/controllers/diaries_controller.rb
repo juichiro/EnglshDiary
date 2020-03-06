@@ -1,7 +1,7 @@
 class DiariesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @diaries = current_user.diaries.all
+    @diaries = current_user.diaries.paginate(page: params[:page], per_page: 10)
   end 
   def show
     @diary = current_user.diaries.find(params[:id])
