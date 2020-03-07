@@ -3,14 +3,16 @@ h2 #{@diary.day}の日記
 .card
  .card-title.mt-2.text-center
   h5 =@diary.title
+ -if @diary.image.attached?
+  =image_tag @diary.image, class:'card-img-top'
  .card-body 
-  -if @diary.image.attached?
-   =image_tag @diary.image, class:'img-fluid'
   =@diary.description
-
 =link_to '編集',edit_diary_path,class:'btn btn-info mr-3 mt-3'
 =link_to '削除', diary_path,class:'btn btn-info mr-3 mt-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
 =link_to '日記一覧へ', diaries_path,class: 'btn btn-info mt-3'
+
+  
+
 
 
 
