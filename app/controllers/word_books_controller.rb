@@ -14,6 +14,11 @@ class WordBooksController < ApplicationController
     @word.save
     redirect_to word_books_index_url
   end
+  def destroy
+    @word = current_user.word_books.find(params[:id])
+    @word.destroy
+    redirect_to word_books_index_url
+  end
   
   private
   def word_params

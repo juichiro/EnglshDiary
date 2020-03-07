@@ -6,10 +6,12 @@ table.table.table-hover
     tr
       th 英
       th 日
+      th
   tbody
    - @words.each do |word|
     tr
       td=word.eword
       td=word.jword
+      td= link_to '削除', word_book_path(word),class:'btn btn-info btn-sm',method: :delete
 
 = will_paginate(@words,class: "pagination justify-content-center",renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)
