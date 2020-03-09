@@ -2,10 +2,11 @@
   .col-md-6
     = form_with model: diary, url: translation_path do |f|
       .form-group
-        = f.label :text, 'テキスト'
-        = f.text_area :text,class:'form-control'
+        = f.label :text, '日'
+        = f.text_area :text,size:'5x5',class:'form-control'
       = f.submit '翻訳', class:'btn btn-info'
 
-  .card.col-md-6
-    .card-body
-     p.result 
+  .col-md-6
+    =label_tag'英'
+    =text_area_tag'result',nil,class:'result form-control',size:'5x5'
+      
