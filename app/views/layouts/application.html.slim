@@ -28,7 +28,7 @@ html
           a.nav-link.disabled[href="#"]
             |  tabindex="-1" aria-disabled="true"無効
 
-   .container.mt-4.h-100
+   .container.mt-4
     -if flash[:notice].present?
      .alert.alert-info =flash[:notice]
     = yield
