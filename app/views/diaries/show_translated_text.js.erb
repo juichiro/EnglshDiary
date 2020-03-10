@@ -1,5 +1,14 @@
 <!--翻訳結果をajaxで表示するためのコード-->
 <!-- document.querySelector('h5').style.display = 'none'; -->
+
+<!--htmlエスケープ文字をアンエスケープする-->
+function unescapeHTML(escapedHtml) {
+  const doc = new DOMParser().parseFromString(escapedHtml, 'text/html');
+  return doc.documentElement.textContent;
+}
+
+
 var element = document.getElementById('result');
-var result = "<%= @result[:translated_text] %>";
+var result = '<%= @result[:translated_text] %>';
+result = unescapeHTML(result);
 element.value = result;
