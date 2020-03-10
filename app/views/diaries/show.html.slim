@@ -1,5 +1,6 @@
 .text-center
-  h2 =@diary.day
+  i.material-icons calendar_today
+  h2.d-inline-block.pt-3.ml-2 =@diary.day
   
   .card.w-75.mx-auto
    .card-title.mt-2
@@ -8,7 +9,7 @@
     =image_tag @diary.image, class:'card-img-top mx-auto img-responsive diary-img',style:'max-width:100%; height:auto'
    .card-body 
     p =@diary.description
-  =link_to '編集',edit_diary_path,class:'btn btn-info mr-3 mt-3'
+  =link_to '編集',edit_diary_path,class:'btn btn-info mr-3 mt-3 '
   =link_to '削除', diary_path,class:'btn btn-info mr-3 mt-3',method: :delete,data:{confirm:'本当に削除してよろしいでしょうか?'}
   =link_to '日記一覧へ', diaries_path,class: 'btn btn-info mt-3'
 
