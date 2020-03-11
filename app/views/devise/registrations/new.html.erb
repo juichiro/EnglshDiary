@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2 class="pt-4">新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -22,8 +22,11 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", class:'btn btn-info' %>
+    <%= f.submit "新規登録", class:'btn btn-warning btn-sm mt-1' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<!--余白を下に作るためのdiv-->
+<div class="pb-3"></div>

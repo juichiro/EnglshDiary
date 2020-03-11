@@ -76,3 +76,5 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
