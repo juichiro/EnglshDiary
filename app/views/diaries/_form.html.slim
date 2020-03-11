@@ -3,7 +3,7 @@
    - diary.errors.full_messages.each do |message|
      li =message
      
-= form_with model: @diary, local: true do |f|
+= form_with model: diary, local: true do |f|
   .form-group
     = f.label :day, '日時'
     = f.date_select :day

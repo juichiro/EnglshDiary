@@ -4,7 +4,7 @@
    - word.errors.full_messages.each do |message|
      li =message
      
-= form_with model: word do |f|
+= form_with model: word, local: true do |f|
   .form-group
     = f.label :eword, '英'
     = f.text_field :eword, class:'form-control'
@@ -12,3 +12,4 @@
     = f.label :jword, '日'
     = f.text_field :jword, class:'form-control'
   = f.submit '追加', class:'btn btn-info'
+

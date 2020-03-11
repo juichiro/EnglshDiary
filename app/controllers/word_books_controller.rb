@@ -11,8 +11,14 @@ class WordBooksController < ApplicationController
   end
   def create
     @word = current_user.word_books.new(word_params)
-    @word.save
-    redirect_to word_books_index_url
+    if @word.save
+      flash[:notice] = '正常に追加しました'
+      redirect_to word_books_index_url
+    else 
+      flash.now[:notice] = '追加できませんでした'
+      @words = current_user.word_books.paginate(page: params[:page], per_page: 20)
+      render :index
+    end
   end
   def destroy
     @word = current_user.word_books.find(params[:id])
