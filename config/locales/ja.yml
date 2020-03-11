@@ -215,5 +215,7 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
-
-      
+  will_paginate:
+    previous_label: '&lt 前'
+    next_label: '次 &gt'
+    page_gap: …
