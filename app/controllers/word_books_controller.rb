@@ -3,7 +3,7 @@ class WordBooksController < ApplicationController
   
   def index 
     @word = current_user.word_books.new
-    @words = current_user.word_books.paginate(page: params[:page], per_page: 20)
+    @words = current_user.word_books.paginate(page: params[:page], per_page: 20).order('created_at DESC')
   end
 
   def new

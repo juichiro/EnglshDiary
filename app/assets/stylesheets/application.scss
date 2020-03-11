@@ -29,3 +29,19 @@ body{
 i.material-icons.calendar{
     margin-left:13%;
 }
+
+// 
+a.page-link{
+    color:black;
+}
+li.active.page-item a.page-link{
+    background-color:#17a2b8;
+    border-color:#17a2b8;
+}
+
+input#user_email{
+    border:inset;
+}
+input#user_password{
+    border:inset;
+}
